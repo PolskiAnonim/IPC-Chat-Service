@@ -1,7 +1,7 @@
 ----------- OPIS ------------
-programu pozwalającY na komunikację (chat)
+Program pozwalający na komunikację (chat)
 użytkowników, odbywającą się poprzez wymianę wiadomości pomiędzy nimi.
-Aplikacja wykorzystuje mechanizm kolejek komunikatów dostępny w systemie Linux.
+Aplikacja składa się z klienta i serwera oraz wykorzystuje mechanizm kolejek komunikatów dostępny w systemie Linux.
 --- INSTRUKCJA KOMPILACJI ---
 WYMAGANIA
 Do prawidłowej kompilacji programu wymagany jest
