@@ -1,0 +1,43 @@
+--- INSTRUKCJA KOMPILACJI ---
+WYMAGANIA
+Do prawidłowej kompilacji programu wymagany jest
+- cMake - minimalna wersja 3.8
+- Kompilator gcc ze standardem C 11
+- Pliki serwera: "serwer.c" "serwer.h"
+- Pliki klienta: "klient.c" "klient.h"
+- Plik CMake: CMakeLists.txt
+
+KOMPILACJA
+
+1. Aby poprawnie skompilować program należy użyć następującej komędy znajdując się w folderze z plikiem CMakeLists.txt
+
+$cmake -B <path>;
+
+gdzie <path> oznacza ścieżkę, w której będzie znajdował się program. Proponowaną jest ./build
+
+2. Następnie w tym samym folderze należy użyć komendy
+
+$cmake --build <path>
+
+Po wykonaniu prawidłowej kompilacji w <path> znajdować się będą pliki wykonywalne: klient oraz serwer
+
+---INSTRUKCJA URUCHOMIENIA---
+
+Do poprawnej komunikacji pomiędzy serwerem, a klientem wymagane jest najpierw uruchomienie pliku serwer poprzez wpisanie ./serwer.
+
+Po zakończeniu wstępnej konfiguracji możliwe jest dołączanie klientów do serwera poprzez uruchomienie programu klient wpisując ./klient.
+
+---OPIS PLIKÓW---
+
+-SERWER-
+serwer.c - plik z kodem zapisanym w języku C zawierający logikę serwera
+serwer.h - plik nagłówkowy serwera zawierający opis interfejsu programu
+
+-KLIENT-
+klient.c - plik z kodem zapisanym w języku C zawierający logikę klienta
+klient.h - plik nagłówkowy serwera zawierający opis interfejsu klienta
+
+-PLIKI KONFIGURACYJNE-
+groups.cfg - plik binarny zawierający informację o istniejących kanałach. Zgodnie z zaleceniami jego zawartość tworzy 3 grupy [1-3]
+
+channels.cfg - plik binarny zawierający informację o istniejących użytkownikach. Zgodnie z zaleceniami jego zawartość tworzy konta dla 9 użytkowników [1-9] o haśle 1
